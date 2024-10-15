@@ -1,0 +1,3498 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/14/2024 3:58:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-CDH2DEU"
+  DTS:CreatorName="DESKTOP-CDH2DEU\Lenovo"
+  DTS:DTSID="{6C4A1CC4-AA5B-4390-8176-6DF7A8DCF12B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{891E2E99-0049-4BC9-A3AC-460C1F41C314}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(2B)uscounties]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{510FA164-8B22-43C2-B47A-5D5C6C908C28}"
+      DTS:ObjectName="(2B)uscounties">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Download\2425.BI.DATH-20241014T085719Z-001\2425.BI.DATH\(2B)uscounties.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county&quot;"
+              DTS:DTSID="{4B427C08-1FCD-47AD-86C3-82F2F0EC72A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county_ascii&quot;"
+              DTS:DTSID="{28DF8D22-6EF5-4C2B-88D5-9B29D283845B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county_full&quot;"
+              DTS:DTSID="{06E6E901-9F6A-4934-9767-E713FDDF9EB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county_fips&quot;"
+              DTS:DTSID="{F1EC44E8-5214-4459-AB07-479AC0147290}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;state_id&quot;"
+              DTS:DTSID="{042B2FE9-8870-4E85-829A-6A8D0400C4E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;state_name&quot;"
+              DTS:DTSID="{49A6F202-7674-4B8B-9960-7F5C0CA8A4D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;lat&quot;"
+              DTS:DTSID="{2F3A5E71-5268-4CB4-A042-CA9BDEE9D3EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;lng&quot;"
+              DTS:DTSID="{27FE0DFB-BD68-4BDB-A836-DA305DD746F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;population&quot;"
+              DTS:DTSID="{4CAB9102-D0E4-4A41-BDE4-889965B2728D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CDH2DEU\SQLSERVER]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{512884BF-11C1-4F8E-A4B7-7953622DE006}"
+      DTS:ObjectName="DESKTOP-CDH2DEU\SQLSERVER">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CDH2DEU\SQLSERVER;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{512884BF-11C1-4F8E-A4B7-7953622DE006}DESKTOP-CDH2DEU\SQLSERVER;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CDH2DEU\SQLSERVER.AQIDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{81D070EE-9553-4DF4-9D28-FA33798416AF}"
+      DTS:ObjectName="DESKTOP-CDH2DEU\SQLSERVER.AQIDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CDH2DEU\SQLSERVER;User ID=;Initial Catalog=AQIDB;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Server SPN=;Authentication=;Access Token=;Application Name=SSIS-Package-{81D070EE-9553-4DF4-9D28-FA33798416AF}DESKTOP-CDH2DEU\SQLSERVER.AQIDB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{09966D28-9A25-410E-A180-9128B04A8A24}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::FilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Download\2425.BI.DATH-20241014T085719Z-001\2425.BI.DATH\Air_Quality_Data\10_state_aqi_2021.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{2EC85030-FBC2-4DBD-B6C0-2340FD9B4457}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{342B7726-7FFE-4164-AEBB-2E448A3F12C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{89876A59-0A70-4182-9B6E-821BCE249E77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{72EDF7CC-4697-42D4-9D0A-A0F19C08B801}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{898B706E-C884-45C5-AC16-377FBEC24674}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{292BCC57-0694-48AE-B6FA-274271A52AF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{76F1DB03-6305-4A67-B8AD-032DCFEC4861}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{478F874D-12AC-4555-AA69-6DB25E285AC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{9FC6B422-0C60-4A02-A88F-30B0846941C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{28447DE9-0A60-4AE3-BF8F-79CB6A00ACDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{B6B705C1-8525-40BD-ABBD-0812990F1B4A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{C7A6C865-F2F8-4293-B1D9-36B0898D2158}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{24B20D96-C80F-497F-99FB-BAEB3086BC09}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Download\2425.BI.DATH-20241014T085719Z-001\2425.BI.DATH\Air_Quality_Data\10_state_aqi_2021.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{85F528FF-2842-48FE-BE63-775881E61D81}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FolderPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Download\2425.BI.DATH-20241014T085719Z-001\2425.BI.DATH\Air_Quality_Data</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E8882BDE-697B-4EB0-BA28-EFF1EAD00C35}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LoopCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6F7B3E46-C922-4B5A-A87C-9E2E53BFE941}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{96490F32-8366-4981-B4A4-0230E8303235}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\File log 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{f55ae178-5dab-4642-b9e9-da0318b326a9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File log 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"insert into FileInfo values ('"+ @[User::FilePath] +"',"+ (DT_WSTR,12) @[User::RowCount]  +",GETDATE()) "</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{81D070EE-9553-4DF4-9D28-FA33798416AF}"
+          SQLTask:SqlStatementSource="insert into FileInfo values ('D:\Download\2425.BI.DATH-20241014T085719Z-001\2425.BI.DATH\Air_Quality_Data\10_state_aqi_2021.csv',0,GETDATE()) " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{5ACC53D2-5E0B-49F0-9B61-466D971C811A}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{9FAAB14A-7E1D-4ABF-8835-F9CE1B8F89BE}"
+        DTS:ObjectName="{9FAAB14A-7E1D-4ABF-8835-F9CE1B8F89BE}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="D:\Download\2425.BI.DATH-20241014T085719Z-001\2425.BI.DATH\Air_Quality_Data" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\File log 2"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{22B9473B-96A9-4E3B-A92F-AFCD4AA5A90D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="File log 2"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"insert into FileInfo values ('"+ @[User::FilePath] +"',"+ (DT_WSTR,12) @[User::RowCount]  +",GETDATE()) "</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{81D070EE-9553-4DF4-9D28-FA33798416AF}"
+              SQLTask:SqlStatementSource="insert into FileInfo values ('D:\Download\2425.BI.DATH-20241014T085719Z-001\2425.BI.DATH\Air_Quality_Data\10_state_aqi_2021.csv',0,GETDATE()) " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Load AQI Data"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{EF9E8DA1-C6F6-45CC-BF8F-4B411B46EB00}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load AQI Data"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[State Name]"
+                          name="State Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[county Name]"
+                          name="county Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[State Code]"
+                          name="State Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[County Code]"
+                          name="County Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[AQI]"
+                          dataType="ui2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[AQI]"
+                          name="AQI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                          name="Category"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          name="Defining Parameter"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          name="Defining Site"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          dataType="ui2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          name="Number of Sites Reporting"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created]"
+                          name="Created"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          name="Last Updated"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="county Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="County Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          dataType="date"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          dataType="ui2"
+                          name="AQI" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Parameter" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Site" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          dataType="ui2"
+                          name="Number of Sites Reporting" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          dataType="dbTimeStamp"
+                          name="Created" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          dataType="dbTimeStamp"
+                          name="Last Updated" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[AQI_Stage]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-CDH2DEU\SQLSERVER.AQIDB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CDH2DEU\SQLSERVER.AQIDB]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="State Name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[State Name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="county Name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[county Name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="State Code"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[State Code]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[County Code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="County Code"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[County Code]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                          cachedDataType="date"
+                          cachedName="Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AQI]"
+                          cachedDataType="ui2"
+                          cachedName="AQI"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[AQI]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Defining Parameter"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Defining Parameter]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Defining Site"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Defining Site]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                          cachedDataType="ui2"
+                          cachedName="Number of Sites Reporting"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Created]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Created"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Last Updated"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="county Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="County Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          dataType="dbTimeStamp"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                          dataType="i4"
+                          name="AQI" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Parameter" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Site" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                          dataType="i4"
+                          name="Number of Sites Reporting" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                          dataType="dbTimeStamp"
+                          name="Created" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                          dataType="dbTimeStamp"
+                          name="Last Updated" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load AQI Data\Row Count"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::RowCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load AQI Data\Row Count.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load AQI Data\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Foreach Loop Container\Load AQI Data\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Load AQI Data.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Load AQI Data\Row Count.Inputs[Row Count Input 1]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Load AQI Data\Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Load AQI Data.Paths[Row Count Output 1]"
+                  endId="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Foreach Loop Container\Load AQI Data\Row Count.Outputs[Row Count Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{50A78304-02E8-4F9F-9A3F-07CE034BA5DA}"
+          DTS:From="Package\Foreach Loop Container\Load AQI Data"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Foreach Loop Container\File log 2" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{C8F59FD5-2E3D-4C3E-9EFD-32AE0D3CD36F}"
+          DTS:ObjectName="{C8F59FD5-2E3D-4C3E-9EFD-32AE0D3CD36F}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load US counties data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5E69E165-15B4-426D-B48A-7C88443759E9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load US counties data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load US counties data\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load US counties data\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(2B)uscounties]"
+                  connectionManagerRefId="Package.ConnectionManagers[(2B)uscounties]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county&quot;]"
+                      name="&quot;county&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_ascii&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county_ascii&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_ascii&quot;]"
+                      name="&quot;county_ascii&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_full&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county_full&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_full&quot;]"
+                      name="&quot;county_full&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_fips&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county_fips&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_fips&quot;]"
+                      name="&quot;county_fips&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;state_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;state_id&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;state_id&quot;]"
+                      name="&quot;state_id&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;state_name&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;state_name&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;state_name&quot;]"
+                      name="&quot;state_name&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;lat&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;lat&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;lat&quot;]"
+                      name="&quot;lat&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;lng&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;lng&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;lng&quot;]"
+                      name="&quot;lng&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;population&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;population&quot;]"
+                      length="50"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;population&quot;]"
+                      name="&quot;population&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county_ascii&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county_ascii&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county_full&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county_full&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;county_fips&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county_fips&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;state_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;state_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;state_name&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;state_name&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;lat&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;lat&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;lng&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;lng&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;population&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;population&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load US counties data\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[uscounties]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load US counties data\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CDH2DEU\SQLSERVER.AQIDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CDH2DEU\SQLSERVER.AQIDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[population]"
+                      cachedDataType="ui8"
+                      cachedName="population"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[population]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lng]"
+                      cachedDataType="r8"
+                      cachedName="lng"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[lng]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lat]"
+                      cachedDataType="r8"
+                      cachedName="lat"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[lat]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[state_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_name"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[state_name]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[state_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_id"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[state_id]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county_fips]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_fips"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_fips]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county_full]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_full"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_full]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county_ascii]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_ascii"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_ascii]" />
+                    <inputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      dataType="numeric"
+                      name="population"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      dataType="r8"
+                      name="lng" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      dataType="r8"
+                      name="lat" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_fips" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_full" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_ascii" />
+                    <externalMetadataColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load US counties data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load US counties data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load US counties data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load US counties data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load US counties data\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCount</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load US counties data\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load US counties data\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Load US counties data\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load US counties data\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="13">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using System.Windows.Forms;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        /*
+         * Add your code here
+         */
+        Row.countyascii = Row.countyasciiin;
+        Row.county = Row.countyin;
+        Row.countyfips = Row.countyfipsin;
+        Row.countyfull = Row.countyfullin;
+        Row.stateid = Row.stateidin;
+        Row.statename = Row.statenamein;
+
+        double lat = 0;
+        string lat_str = Row.latin.Replace("\"","");
+        double.TryParse(lat_str, out lat);
+        Row.lat = lat;
+
+
+        double lng = 0;
+        double.TryParse(Row.lngin.Replace("\"", ""), out lng);
+        Row.lng = lng;
+
+        ulong population = 0;
+        ulong.TryParse(Row.populationin.Replace("\"", ""), out population);
+        Row.population = population;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_d310f7324c544825a77ee7f5ff8c7f02.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B7FF046-95A9-410F-B008-7ED99458C9FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_d310f7324c544825a77ee7f5ff8c7f02</RootNamespace>
+    <AssemblyName>SC_d310f7324c544825a77ee7f5ff8c7f02</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_d310f7324c544825a77ee7f5ff8c7f02.Properties.Settings.get_Default():SC_d310f7324c544825a77ee7f5ff8c7f02.Properties.Sett" +
+    "ings")]
+
+namespace SC_d310f7324c544825a77ee7f5ff8c7f02.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String countyin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool countyin_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String countyasciiin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+    }
+    public bool countyasciiin_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String countyfullin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[2]);
+        }
+    }
+    public bool countyfullin_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public String countyfipsin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[3]);
+        }
+    }
+    public bool countyfipsin_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+    }
+
+    public String stateidin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[4]);
+        }
+    }
+    public bool stateidin_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public String statenamein
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[5]);
+        }
+    }
+    public bool statenamein_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public String latin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[6]);
+        }
+    }
+    public bool latin_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+    }
+
+    public String lngin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[7]);
+        }
+    }
+    public bool lngin_IsNull
+    {
+        get
+        {
+            return IsNull(7);
+        }
+    }
+
+    public String populationin
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[8]);
+        }
+    }
+    public bool populationin_IsNull
+    {
+        get
+        {
+            return IsNull(8);
+        }
+    }
+
+    public UInt64 population
+    {
+        set
+        {
+            this[9] = value;
+        }
+    }
+    public bool population_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(9);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Double lng
+    {
+        set
+        {
+            this[10] = value;
+        }
+    }
+    public bool lng_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(10);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Double lat
+    {
+        set
+        {
+            this[11] = value;
+        }
+    }
+    public bool lat_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(11);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String statename
+    {
+        set
+        {
+            this[12] = value;
+        }
+    }
+    public bool statename_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(12);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String stateid
+    {
+        set
+        {
+            this[13] = value;
+        }
+    }
+    public bool stateid_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(13);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String countyfips
+    {
+        set
+        {
+            this[14] = value;
+        }
+    }
+    public bool countyfips_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(14);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String countyfull
+    {
+        set
+        {
+            this[15] = value;
+        }
+    }
+    public bool countyfull_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(15);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String countyascii
+    {
+        set
+        {
+            this[16] = value;
+        }
+    }
+    public bool countyascii_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(16);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String county
+    {
+        set
+        {
+            this[17] = value;
+        }
+    }
+    public bool county_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(17);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_d310f7324c544825a77ee7f5ff8c7f02</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_d310f7324c544825a77ee7f5ff8c7f02</msb:DisplayName>
+    <msb:ProjectId>{8042E0A6-733A-4FA1-BA8E-E65339B2993B}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_d310f7324c544825a77ee7f5ff8c7f02.csproj" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_d310f7324c544825a77ee7f5ff8c7f02")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_d310f7324c544825a77ee7f5ff8c7f02")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_d310f7324c544825a77ee7f5ff8c7f02.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_d310f7324c544825a77ee7f5ff8c7f02.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_d310f7324c544825a77ee7f5ff8c7f02.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_d310f7324c544825a77ee7f5ff8c7f02.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_d310f7324c544825a77ee7f5ff8c7f02.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_d310f7324c544825a77ee7f5ff8c7f02.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAOB7DmcAAAAAAAAAAOAAIiALATAAABwAAAAIAAAAAAAAsjoA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAGA6AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAuBoAAAAgAAAAHAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAeAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAJAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACU
+OgAAAAAAAEgAAAACAAUAjCQAABwVAAABAAAAAAAAAKg5AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAMAzAAAAAEAABEDA28IAAAG
+byYAAAYDA28GAAAGbygAAAYDA28MAAAGbyIAAAYDA28KAAAGbyQAAAYDA28OAAAGbyAAAAYDA28Q
+AAAGbx4AAAYjAAAAAAAAAAAKA28SAAAGcgEAAHByBQAAcG8SAAAKEgAoEwAACiYDBm8cAAAGIwAA
+AAAAAAAACwNvFAAABnIBAABwcgUAAHBvEgAAChIBKBMAAAomAwdvGgAABhZqDANvFgAABnIBAABw
+cgUAAHBvEgAAChICKBQAAAomAwhvGAAABioeAigsAAAGKioCAwQFKBUAAAoqUgJ7FgAACgJ7FwAA
+ChaUbxgAAAoqIgIWKBkAAAoqUgJ7FgAACgJ7FwAACheUbxgAAAoqIgIXKBkAAAoqUgJ7FgAACgJ7
+FwAAChiUbxgAAAoqIgIYKBkAAAoqUgJ7FgAACgJ7FwAAChmUbxgAAAoqIgIZKBkAAAoqUgJ7FgAA
+CgJ7FwAAChqUbxgAAAoqIgIaKBkAAAoqUgJ7FgAACgJ7FwAAChuUbxgAAAoqIgIbKBkAAAoqUgJ7
+FgAACgJ7FwAAChyUbxgAAAoqIgIcKBkAAAoqUgJ7FgAACgJ7FwAACh2UbxgAAAoqIgIdKBkAAAoq
+UgJ7FgAACgJ7FwAACh6UbxgAAAoqIgIeKBkAAAoqPgIfCQOMHAAAASgaAAAKKl4DLAkCHwkoGwAA
+CipyBwAAcHMcAAAKej4CHwoDjBsAAAEoGgAACipeAywJAh8KKBsAAAoqcgcAAHBzHAAACno+Ah8L
+A4wbAAABKBoAAAoqXgMsCQIfCygbAAAKKnIHAABwcxwAAAp6KgIfDAMoGgAACipeAywJAh8MKBsA
+AAoqcgcAAHBzHAAACnoqAh8NAygaAAAKKl4DLAkCHw0oGwAACipyBwAAcHMcAAAKeioCHw4DKBoA
+AAoqXgMsCQIfDigbAAAKKnIHAABwcxwAAAp6KgIfDwMoGgAACipeAywJAh8PKBsAAAoqcgcAAHBz
+HAAACnoqAh8QAygaAAAKKl4DLAkCHxAoGwAACipyBwAAcHMcAAAKeioCHxEDKBoAAAoqXgMsCQIf
+ESgbAAAKKnIHAABwcxwAAAp6HgIoHQAACioeAigeAAAKKn4CKB8AAAoCAnMwAAAGfQEAAAQCAnMx
+AAAGfQIAAAQqkgRypAAAcBpvIAAACiwVAgUCAyghAAAKDgRzBQAABm8uAAAGKkorBwIDby8AAAYD
+byoAAAYt8SoGKjoCKCIAAAoCA30DAAAEKjoCKCIAAAoCA30EAAAEKh4CKCIAAAoqrn4FAAAELR5y
+tAAAcNAHAAACKCMAAApvJAAACnMlAAAKgAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcAAAQq
+HgIoJgAACiouczcAAAaABwAABCoAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwA
+AAAoCQAAI34AAJQJAACACAAAI1N0cmluZ3MAAAAAFBIAACgBAAAjVVMAPBMAABAAAAAjR1VJRAAA
+AEwTAADQAQAAI0Jsb2IAAAAAAAAAAgAAAVcVogEJAQAAAPoBMwAWAAABAAAAIQAAAAgAAAAHAAAA
+OAAAAB8AAAAmAAAAEAAAAAEAAAADAAAAJwAAACgAAAABAAAABAAAAAEAAAAAAD4DAQAAAAAABgAd
+ApMGBgCxApMGBgBpAYAGDwAHBwAABgCWAdUFBgAAAtUFBgDhAdUFBgCYAtUFBgA9AtUFBgBWAtUF
+BgCtAdUFBgDIAewCCgBxAq0ACgBSBq0ADgBDBq0ACgAeBq0ACgDkB60ABgCnB/oEBgBMAYAGBgBj
+BrMGBgASBsAFEgAcASgDEgB9ASgDEgD7AKsFBgAxAZMGBgAJA/oEBgBqAPoEBgAlAPoEBgDnBfoE
+BgABBvoEBgDOAPoEBgBxAPoEBgBpCNUFAAAAACwAAAAAAAEAAQABABAADQUAABAAAQABAAEAEAA2
+BgAAOQABAAUAAQAQAMYHAABFAAEALAABABAAhAcAAEkAAwAwAAEAEABFBwAASQAEADEAAAAQALoG
+FgdJAAUAMgAAARAAdAcWB2EABwA2AAYAhAeQAAYARQeUAAEA1AeYAAEA1AeYABEAAQWcABEA6wCg
+ABEAWgCkAFAgAAAAAMYAzwIGAAEAWCAAAAAAxgDaAgYAAQBgIAAAAADGAEYIqAABADghAAAAAIYY
+cwYGAAIAQCEAAAAAhhhzBjUAAgBLIQAAAACGCI8FrgAFAGAhAAAAAIYIeQRXAAUAaSEAAAAAhghA
+Ba4ABQB+IQAAAACGCAcEVwAFAIchAAAAAIYIUgWuAAUAnCEAAAAAhgggBFcABQClIQAAAACGCHQF
+rgAFALohAAAAAIYIUARXAAUAwyEAAAAAhggYBa4ABQDYIQAAAACGCMoDVwAFAOEhAAAAAIYIJgWu
+AAUA9iEAAAAAhgjfA1cABQD/IQAAAACGCIUFrgAFABQiAAAAAIYIaARXAAUAHSIAAAAAhgg2Ba4A
+BQAyIgAAAACGCPYDVwAFADsiAAAAAIYIYwWuAAUAUCIAAAAAhgg4BFcABQBZIgAAAACGCJwFsgAF
+AGkiAAAAAIYIjQS3AAYAgSIAAAAAhggQA7wABwCRIgAAAACGCI4DtwAIAKkiAAAAAIYInwe8AAkA
+uSIAAAAAhgi5BLcACgDRIgAAAACGCJ8AEAALANwiAAAAAIYIeQO3AAwA9CIAAAAAhghGABAADQD/
+IgAAAACGCGYDtwAOABcjAAAAAIYIkAcQAA8AIiMAAAAAhgijBLcAEAA6IwAAAACGCOIEEAARAEUj
+AAAAAIYItAO3ABIAXSMAAAAAhggYAxAAEwBoIwAAAACGCJ0DtwAUAIAjAAAAAIYIcggQABUAiyMA
+AAAAhgjIBLcAFgCjIwAAAACGAF0IVwAXAKsjAAAAAIYArgdXABcAsyMAAAAAhhhzBgYAFwDTIwAA
+AADGADkIwQAXAPgjAAAAAMYBMgioABsACyQAAAAAxgFGCKgAHAANJAAAAACGGHMGywAdABwkAAAA
+AIYYcwbLAB4AKyQAAAAAgxhzBgYAHwAzJAAAAACTCF8G0QAfAF8kAAAAAJMI0wDWAB8AZiQAAAAA
+kwjfANsAHwBuJAAAAACWCLoH4QAgAHUkAAAAAIYYcwYGACAAfSQAAAAAkRh5BuYAIAAAAAEAYQgA
+AAEAWAYAAAIATwcAAAMALAYAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA
+5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIAAAEA5gIA
+AAEA5gIAAAEA5gIAAAEANQAAAAIAlQAAAAMAWAYAAAQALAYAAAEAWAYAAAEAYQgAAAEA6gcAAAEA
+6gcAAAEA5gIJAHMGAQARAHMGBgAZAHMGCgApAHMGEAAxAHMGEAA5AHMGEABBAHMGEABJAHMGEABR
+AHMGEABZAHMGEABhAHMGEABpAHMGBgCZAHMGBgC5AHMGFQDJAHMGBgCJAM8CBgCJANoCBgDRAFIA
+IQDZABMBJwDhABMBLgBxAHMGNQBxAFgGPwBxAE8HQwB5AAYDRwBxANMETABxAPEEUQBxANoEAQDp
+AHMGEABxAF0IVwBxAK4HVwCJAHMGBgDRAH0HWwCJAGMHYgCRAHMGBgD5AIMAaAD5AGUIcAChAHMG
+dgDBAHMGBgAuAAsACQEuABMAEgEuABsAMQEuACMAOgEuACsAYwEuADMAYwEuADsAYwEuAEMAOgEu
+AEsAaQEuAFMAYwEuAFsAgAFDAGMAygHhAHsAygHjAGsAygGpBHMAMQHJBHMAMQEbAAMAAQAHACUA
+CAAnAAAAkwXqAAAAfQTuAAAARAXqAAAACwTuAAAAVgXqAAAAJATuAAAAeAXqAAAAVATuAAAAHAXq
+AAAAzgPuAAAAKgXqAAAA4wPuAAAAiQXqAAAAbATuAAAAOgXqAAAA+gPuAAAAZwXqAAAAPATuAAAA
+oAXyAAAAkQTuAAAAFAP2AAAAkgPuAAAAowf2AAAAvQTuAAAAowDqAAAAfQPuAAAASgDqAAAAagPu
+AAAAlAfqAAAApwTuAAAA5gTqAAAAuAPuAAAAHAPqAAAAoQPuAAAAdgjqAAAAzATuAAAAYwb6AAAA
+8wD/AAAAvgcEAQIABgADAAIABwAFAAIACAAHAAIACQAJAAIACgALAAIACwANAAIADAAPAAIADQAR
+AAIADgATAAIADwAVAAIAEAAXAAIAEQAZAAIAEgAbAAIAEwAdAAIAFAAfAAIAFQAhAAIAFgAjAAIA
+FwAlAAEAGAAnAAEAGQApAAEAGgArAAEAGwAtAAEAHAAvAAEAHQAxAAEAHgAzAAEAHwA1AAEAIAA3
+AAEAIQA5AAEAIgA7AAEAIwA9AAEAJAA/AAEAJQBBAAEAJgBDAAEAJwBFAAEAKABHAAEAKQBJAAIA
+MwBLAAIANABNAAEANQBNAAIANgBPAASAAAABAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAAAAB+
+AD0AAAAAABAAAAAAAAAAAAAAAIcA9AcAAAAAEAAAAAAAAAAAAAAAhwARCAAAAAAEAAAAAAAAAAAA
+AAB+APoEAAAAAAAAAAABAAAAxAYAAAAAAFNDX2QzMTBmNzMyNGM1NDQ4MjVhNzdlZTdmNWZmOGM3
+ZjAyAFVJbnQ2NAA8TW9kdWxlPgBJbnB1dElEAG1zY29ybGliAHNldF9zdGF0ZWlkAFJlcGxhY2UA
+ZGVmYXVsdEluc3RhbmNlAERvdWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRs
+ZQBJbnB1dE5hbWUAc2V0X3N0YXRlbmFtZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGlu
+ZQBUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlv
+blNldHRpbmdzQmFzZQBUcnlQYXJzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVy
+YXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRy
+aWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNz
+ZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5
+Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBp
+bGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2Vt
+Ymx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmli
+dXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0
+ZQBQcmVFeGVjdXRlAFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcA
+R2V0U3RyaW5nAHNldF9sbmcAc2V0X2NvdW50eWFzY2lpAFN5c3RlbS5Db21wb25lbnRNb2RlbABT
+Q19kMzEwZjczMjRjNTQ0ODI1YTc3ZWU3ZjVmZjhjN2YwMi5kbGwAc2V0X3N0YXRlaWRfSXNOdWxs
+AHNldF9zdGF0ZW5hbWVfSXNOdWxsAHNldF9sbmdfSXNOdWxsAHNldF9jb3VudHlhc2NpaV9Jc051
+bGwAc2V0X2NvdW50eWZ1bGxfSXNOdWxsAGdldF9zdGF0ZWlkaW5fSXNOdWxsAGdldF9zdGF0ZW5h
+bWVpbl9Jc051bGwAZ2V0X2xuZ2luX0lzTnVsbABnZXRfY291bnR5YXNjaWlpbl9Jc051bGwAZ2V0
+X2NvdW50eWZ1bGxpbl9Jc051bGwAZ2V0X3BvcHVsYXRpb25pbl9Jc051bGwAZ2V0X2NvdW50eWZp
+cHNpbl9Jc051bGwAZ2V0X2xhdGluX0lzTnVsbABnZXRfY291bnR5aW5fSXNOdWxsAHNldF9wb3B1
+bGF0aW9uX0lzTnVsbABzZXRfY291bnR5Zmlwc19Jc051bGwAc2V0X2xhdF9Jc051bGwAc2V0X2Nv
+dW50eV9Jc051bGwAU2V0TnVsbABzZXRfY291bnR5ZnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3Vy
+Y2VNYW4AU2NyaXB0TWFpbgBnZXRfc3RhdGVpZGluAGdldF9zdGF0ZW5hbWVpbgBnZXRfbG5naW4A
+Z2V0X2NvdW50eWFzY2lpaW4AZ2V0X2NvdW50eWZ1bGxpbgBnZXRfcG9wdWxhdGlvbmluAGdldF9j
+b3VudHlmaXBzaW4AZ2V0X2xhdGluAGdldF9jb3VudHlpbgBzZXRfcG9wdWxhdGlvbgBTeXN0ZW0u
+Q29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZh
+bGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0
+TmFtZU1hcABPdXRwdXRNYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNjcmlwdEJ1ZmZl
+cgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lz
+dGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDX2QzMTBmNzMy
+NGM1NDQ4MjVhNzdlZTdmNWZmOGM3ZjAyLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBE
+ZWJ1Z2dpbmdNb2RlcwBTQ19kMzEwZjczMjRjNTQ0ODI1YTc3ZWU3ZjVmZjhjN2YwMi5Qcm9wZXJ0
+aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGlu
+Z3MARXF1YWxzAENvbm5lY3Rpb25zAHNldF9jb3VudHlmaXBzAHNldF9sYXQAT2JqZWN0AEVuZE9m
+Um93c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENv
+bXBvbmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
+UGlwZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBO
+ZXh0Um93AGdldF9Bc3NlbWJseQBzZXRfY291bnR5AAAAAAADIgAAAQCAm0kAcwBOAHUAbABsACAA
+cAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBs
+AHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8A
+bAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMAXwBkADMAMQAw
+AGYANwAzADIANABjADUANAA0ADgAMgA1AGEANwA3AGUAZQA3AGYANQBmAGYAOABjADcAZgAwADIA
+LgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAaaFra6VUjkGwpCCg
+nUrzHgAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQUHAw0NCwUgAg4ODgYAAgIOEA0GAAICDhAL
+CSADARI9HQgSQQMGEj0DBh0IBCABDggEIAECCAUgAgEIHAMgAAIGIAICDhF5BSABHQgIBwABEn0R
+gIEFIAASgIUHIAIBDhKAhQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYS
+IAUgAQESDAMgAA4EIAEBCwQgAQECBCABAQ0JIAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQES
+VQQAABIgAwAAAQMoAA4DKAACAygACwMoAA0ECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQC
+FldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDX2QzMTBmNzMyNGM1NDQ4MjVh
+NzdlZTdmNWZmOGM3ZjAyAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJh
+bWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdv
+cmsgNC43BAEAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVh
+ZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tl
+eVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VT
+ZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAIg6AAAAAAAAAAAAAKI6AAAAIAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACUOgAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+ABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAA
+WEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9
+BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEA
+VgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAA
+AAAAsARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAA
+NABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBO
+AGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMA
+QwBfAGQAMwAxADAAZgA3ADMAMgA0AGMANQA0ADQAOAAyADUAYQA3ADcAZQBlADcAZgA1AGYAZgA4
+AGMANwBmADAAMgAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4A
+MAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AZAAzADEAMABmADcAMwAy
+ADQAYwA1ADQANAA4ADIANQBhADcANwBlAGUANwBmADUAZgBmADgAYwA3AGYAMAAyAC4AZABsAGwA
+AABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAg
+AEAAIAAgADIAMAAyADQAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAA
+AAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwBkADMAMQAw
+AGYANwAzADIANABjADUANAA0ADgAMgA1AGEANwA3AGUAZQA3AGYANQBmAGYAOABjADcAZgAwADIA
+LgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AZAAzADEAMABm
+ADcAMwAyADQAYwA1ADQANAA4ADIANQBhADcANwBlAGUANwBmADUAZgBmADgAYwA3AGYAMAAyAAAA
+NAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAAB
+AEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAC0OgAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_d310f7324c544825a77ee7f5ff8c7f02</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">89</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load US counties data\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;county_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;county&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county&quot;]"
+                      name="&quot;county_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;county_ascii_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;county_ascii&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_ascii&quot;]"
+                      name="&quot;county_ascii_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;county_full_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;county_full&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_full&quot;]"
+                      name="&quot;county_full_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;county_fips_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;county_fips&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;county_fips&quot;]"
+                      name="&quot;county_fips_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;state_id_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;state_id&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;state_id&quot;]"
+                      name="&quot;state_id_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;state_name_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;state_name&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;state_name&quot;]"
+                      name="&quot;state_name_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;lat_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;lat&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;lat&quot;]"
+                      name="&quot;lat_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;lng_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;lng&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;lng&quot;]"
+                      name="&quot;lng_in&quot;" />
+                    <inputColumn
+                      refId="Package\Load US counties data\Script Component.Inputs[Input 0].Columns[&quot;population_in&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;population&quot;"
+                      lineageId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;population&quot;]"
+                      name="&quot;population_in&quot;" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load US counties data\Script Component.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Load US counties data\Script Component.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[population]"
+                      dataType="ui8"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[population]"
+                      name="population" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[lng]"
+                      dataType="r8"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[lng]"
+                      name="lng" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[lat]"
+                      dataType="r8"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[lat]"
+                      name="lat" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[state_name]"
+                      name="state_name" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[state_id]"
+                      name="state_id" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_fips]"
+                      name="county_fips" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_full]"
+                      name="county_full" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county_ascii]"
+                      name="county_ascii" />
+                    <outputColumn
+                      refId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load US counties data\Script Component.Outputs[Output 0].Columns[county]"
+                      name="county" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load US counties data.Paths[Flat File Source Output]"
+              endId="Package\Load US counties data\Script Component.Inputs[Input 0]"
+              name="Flat File Source Output"
+              startId="Package\Load US counties data\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load US counties data.Paths[Output 0]"
+              endId="Package\Load US counties data\Row Count.Inputs[Row Count Input 1]"
+              name="Output 0"
+              startId="Package\Load US counties data\Script Component.Outputs[Output 0]" />
+            <path
+              refId="Package\Load US counties data.Paths[Row Count Output 1]"
+              endId="Package\Load US counties data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Load US counties data\Row Count.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4440A41B-665E-4477-B516-18F63921DB94}"
+      DTS:From="Package\Load US counties data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\File log 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D8419836-39CF-4856-85D4-D647ED4F96EA}"
+      DTS:From="Package\File log 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{D448ED77-6191-48FF-BE80-9874FBCEF9E4}"
+      DTS:EventID="-1527559449"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{B57966BB-3A09-45DC-B475-E91FFCD03294}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Log Errors"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0BD4565B-8F49-4CDF-A28D-0FC97BE52F2E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Log Errors"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"insert into Error_Logs values ('"+ @[System::MachineName] +"','"+ @[System::PackageName] +"', '"+ @[System::SourceName] +"', "+ (DT_WSTR,12)@[System::ErrorCode] +", '"+ replace(@[System::ErrorDescription],"'","") +"', getdate())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{81D070EE-9553-4DF4-9D28-FA33798416AF}"
+              SQLTask:SqlStatementSource="insert into Error_Logs values ('DESKTOP-CDH2DEU','Package', '', 0, '', getdate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\File log 1"
+          TopLeft="321.666649091576,76.7333329777584" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Foreach Loop Container\File log 2"
+          TopLeft="46.7999819695957,115.666664527191" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Foreach Loop Container\Load AQI Data"
+          TopLeft="31.7999827891601,13.3999985716743" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="106.99998278916,54.9999985716743">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.1999991804356,60.6666659555168"
+              Start="0,0"
+              End="22.1999991804356,53.1666659555168">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.3333329777584" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.3333329777584"
+                    Point2="0,30.3333329777584"
+                    Point3="4,30.3333329777584" />
+                  <mssgle:LineSegment
+                    End="18.1999991804356,30.3333329777584" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.1999991804356,30.3333329777584"
+                    Point2="22.1999991804356,30.3333329777584"
+                    Point3="22.1999991804356,34.3333329777584" />
+                  <mssgle:LineSegment
+                    End="22.1999991804356,53.1666659555168" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="256,212"
+          Size="256,255.2"
+          Id="Package\Foreach Loop Container"
+          TopLeft="283.333317852683,153.399998933276" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Load US counties data"
+          TopLeft="321.666649091575,2.20000016272067" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="415.266649091575,43.8000001627207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.1999999999996,32.9333328150378"
+              Start="0,0"
+              End="-11.1999999999996,25.4333328150378">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.4666664075189" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.4666664075189"
+                    Point2="0,16.4666664075189"
+                    Point3="-4,16.4666664075189" />
+                  <mssgle:LineSegment
+                    End="-7.19999999999959,16.4666664075189" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.19999999999959,16.4666664075189"
+                    Point2="-11.1999999999996,16.4666664075189"
+                    Point3="-11.1999999999996,20.4666664075189" />
+                  <mssgle:LineSegment
+                    End="-11.1999999999996,25.4333328150378" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="407.69998347213,118.333332977758">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.0666659555172"
+              Start="0,0"
+              End="0,27.5666659555172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5666659555172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package.EventHandlers[OnError]\Log Errors"
+          TopLeft="488.999992713332,193.999997109175" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Load AQI Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Foreach Loop Container\Load AQI Data\Row Count"
+          TopLeft="581.666634885803,198.466665286554" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination"
+          TopLeft="319.999982515972,271.266664780312" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Foreach Loop Container\Load AQI Data\Flat File Source"
+          TopLeft="368.333313208488,114.399999204477" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load AQI Data.Paths[Flat File Source Output]"
+          TopLeft="443.933313208488,155.999999204477">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="202.533321677314,42.4666660820773"
+              Start="0,0"
+              End="202.533321677314,34.9666660820773">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2333330410386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2333330410386"
+                    Point2="0,21.2333330410386"
+                    Point3="4,21.2333330410386" />
+                  <mssgle:LineSegment
+                    End="198.533321677314,21.2333330410386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="198.533321677314,21.2333330410386"
+                    Point2="202.533321677314,21.2333330410386"
+                    Point3="202.533321677314,25.2333330410386" />
+                  <mssgle:LineSegment
+                    End="202.533321677314,34.9666660820773" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load AQI Data.Paths[Row Count Output 1]"
+          TopLeft="646.466634885802,240.066665286554">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-240.866652369831,31.1999994937582"
+              Start="0,0"
+              End="-240.866652369831,23.6999994937582">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5999997468791" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5999997468791"
+                    Point2="0,15.5999997468791"
+                    Point3="-4,15.5999997468791" />
+                  <mssgle:LineSegment
+                    End="-236.866652369831,15.5999997468791" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-236.866652369831,15.5999997468791"
+                    Point2="-240.866652369831,15.5999997468791"
+                    Point3="-240.866652369831,19.5999997468791" />
+                  <mssgle:LineSegment
+                    End="-240.866652369831,23.6999994937582" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Load AQI Data\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load US counties data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load US counties data\OLE DB Destination"
+          TopLeft="360.833333486484,309.066662006113" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load US counties data\Flat File Source"
+          TopLeft="288.833334559367,90.0666652694676" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Load US counties data\Row Count"
+          TopLeft="358.833333516286,216.066663391921" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Load US counties data\Script Component"
+          TopLeft="578.333301734595,94.7333327246375" />
+        <EdgeLayout
+          Id="Package\Load US counties data.Paths[Row Count Output 1]"
+          TopLeft="423.633333516286,257.666663391921">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.7999999701977,51.399998614192"
+              Start="0,0"
+              End="22.7999999701977,43.899998614192">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.699999307096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.699999307096"
+                    Point2="0,25.699999307096"
+                    Point3="4,25.699999307096" />
+                  <mssgle:LineSegment
+                    End="18.7999999701977,25.699999307096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.7999999701977,25.699999307096"
+                    Point2="22.7999999701977,25.699999307096"
+                    Point3="22.7999999701977,29.699999307096" />
+                  <mssgle:LineSegment
+                    End="22.7999999701977,43.899998614192" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load US counties data.Paths[Flat File Source Output]"
+          TopLeft="440.033334559367,113.199998997053">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.299967175228,0"
+              Start="0,0"
+              End="130.799967175228,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="130.799967175228,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load US counties data.Paths[Output 0]"
+          TopLeft="659.133301734595,136.333332724638">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-235.499968218309,79.7333306672835"
+              Start="0,0"
+              End="-235.499968218309,72.2333306672835">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.8666653336417" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.8666653336417"
+                    Point2="0,39.8666653336417"
+                    Point3="-4,39.8666653336417" />
+                  <mssgle:LineSegment
+                    End="-231.499968218309,39.8666653336417" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-231.499968218309,39.8666653336417"
+                    Point2="-235.499968218309,39.8666653336417"
+                    Point3="-235.499968218309,43.8666653336417" />
+                  <mssgle:LineSegment
+                    End="-235.499968218309,72.2333306672835" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load US counties data\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
