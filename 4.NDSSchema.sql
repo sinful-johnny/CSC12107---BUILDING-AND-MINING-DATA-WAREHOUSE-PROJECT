@@ -53,3 +53,20 @@ CREATE TABLE Diem_NDS (
     CONSTRAINT FK_Diem_HocSinh FOREIGN KEY (MaHS_SK) REFERENCES HocSinh_NDS(MaHS_SK),
     CONSTRAINT FK_Diem_MonHoc FOREIGN KEY (MaMH_SK) REFERENCES MonHoc_NDS(MaMH_SK)
 );
+
+-- update LopHoc_NDS
+-- set siso = (select count(distinct MaHS_NK)
+--             from HocSinh_NDS
+--             where malopSK = MaLop_SK)
+
+select *
+from LopHoc_NDS
+
+select *
+from HocSinh_NDS
+
+select *
+from MonHoc_NDS
+
+select *
+from Diem_NDS

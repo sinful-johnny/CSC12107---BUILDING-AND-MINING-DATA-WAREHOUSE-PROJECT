@@ -1,11 +1,5 @@
--- drop database QLLopHoc_Stage_Error
--- go
-create database QLLopHoc_Stage_Error
-go
-
 use QLLopHoc_Stage_Error
 go
-
 
 CREATE TABLE Stage_LopHoc_Error (
     id_Stage_LopHoc_Error int not null identity(1,1) PRIMARY KEY,
@@ -27,11 +21,16 @@ CREATE TABLE [Stage_Học_sinh_Error] (
     createdAt datetime
 );
 
+select *
+from [Stage_Học_sinh_Error]
+
+update [Stage_Học_sinh_Error]
+set id_rule_violated = 1
+
 CREATE TABLE Stage_MonHoc_Error (
     id_Stage_MonHoc_Error int not null identity(1,1) PRIMARY KEY,
     MaMH VARCHAR(5),
     TenMH VARCHAR(255) NOT NULL,
-    SoTC int,
     id_rule_violated int,
     createdAt datetime
 );

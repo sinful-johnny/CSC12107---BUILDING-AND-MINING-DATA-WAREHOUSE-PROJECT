@@ -1,7 +1,7 @@
---use master
---go
--- drop database QLLopHoc_Stage
+-- use master
 -- go
+drop database QLLopHoc_Stage
+go
 
 create database QLLopHoc_Stage
 go
@@ -9,10 +9,10 @@ go
 use QLLopHoc_Stage
 go
 
-select * from Stage_LopHoc
-select * from Stage_Học_sinh
-select * from Stage_MonHoc
-select * from Stage_Diem
+-- select * from Stage_LopHoc
+-- select * from Stage_Học_sinh
+-- select * from Stage_MonHoc
+-- select * from Stage_Diem
 
 
 CREATE TABLE Stage_LopHoc (
@@ -36,6 +36,7 @@ CREATE TABLE [Stage_Học_sinh] (
 CREATE TABLE Stage_MonHoc (
     MaMH VARCHAR(5) PRIMARY KEY,
     TenMH NVARCHAR(255) NOT NULL,
+    SoTC INT,
 	createdAt datetime,
 	updatedAt datetime
 );
@@ -49,5 +50,5 @@ CREATE TABLE Stage_Diem (
 	updatedAt datetime
 );
 
-
-
+select *
+from Stage_Diem
